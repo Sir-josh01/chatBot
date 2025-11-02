@@ -1,6 +1,6 @@
 {
   "name": "react_simon_tutorial",
-  "homepage": "https://Sir-josh01.github.io/react-chatBot/",
+  "homepage": "https://Sir-josh01.github.io/react_chatBot/",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d dist",
   "private": true,
