@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Chatbot from "supersimpledev";
+import { Chatbot } from "supersimpledev";
 import "../Components/ChatInput.css";
 
 function ChatInput({ chatMessages, setChatMessages }) {
@@ -50,15 +50,20 @@ function ChatInput({ chatMessages, setChatMessages }) {
     <div className="chat-input-container">
       <input
         type="text"
-        placeholder="Send a message to chatbot"
+        placeholder={isLoading ? "Waiting for response..." : "Send a message to chatbot"}
         size="30"
         onChange={saveInputText}
         value={inputText}
         className="chat-input"
         onKeyDown={useEnter}
+        disabled={isLoading}
       />
-      <button onClick={sendMessage} className="send-button">
-        Send
+      <button onClick={sendMessage} 
+        className="send-button"
+        disabled={isLoading}
+        >
+        {isLoading ? "Loading..." : "send"}
+        
       </button>
     </div>
   );
