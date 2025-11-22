@@ -62,7 +62,8 @@ function ChatInput({ chatMessages, setChatMessages }) {
         className="send-button"
         disabled={isLoading}
         >
-        {isLoading ? "Loading..." : "send"}
+        {/* {isLoading ? "Loading..." : "send"} */}
+        send
         
       </button>
     </div>
